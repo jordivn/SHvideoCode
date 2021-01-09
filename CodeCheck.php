@@ -4,7 +4,7 @@
  * 
  * @brief  VideoStream SteedsHoger
  * 
- * @details 
+ * @details     This file checks if an given code exsist. If so, it register the connected pc in de sessiontable and set an cookie.
  * 
  * @author 		Hugo Schut / Jordi van Nistelrooij
  * @email 		info@websensystems.nl
