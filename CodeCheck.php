@@ -47,14 +47,15 @@ if(isset($_POST["Code"])){
     if($objQueryResponse->num_rows > 0){
         //code goed
         session_start();
+        $DB->query("DELETE FROM `VideoSessions` WHERE TIMESTAMPDIFF(DAY, `LoggedIn`,NOW()) > 1");
         $arrayVideoCode = $objQueryResponse->fetch_assoc();
         $intUsed = $arrayVideoCode["Used"] + 1;
         $DB->query("UPDATE `VideoCodes` SET `Used`=(`Used`+1), `LastUsed` = NOW() where `Code`='".$_POST["Code"]."'");
         $_SESSION["ID"] = randomString();
-        
         $DB->query("INSERT INTO `VideoSessions` VALUES(NULL,'".$_POST["Code"]."','".$_SERVER["REMOTE_ADDR"]."','".$_SESSION["ID"]."',NOW())");
         echo json_encode(array("Status" => true, "Response" => "Code geaccepteerd."));
     }else{
+        //code fout
         echo json_encode(array("Status" => false, "Response" => "Code is niet bekend."));
     }
 }
