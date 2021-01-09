@@ -1,0 +1,23 @@
+.VideoCodeInputWrapper{
+   
+}
+
+.VideoCodeInputField, .VideoCodepreIcon i{
+    font-size: 1.5em !important;
+    text-align:center;
+
+}
+
+.VideoCodeSendButton{
+    font-size:1.5em !important;
+    
+}
+
+.VideoCodeSendButton:hover{
+    cursor:pointer;
+}
+
+
+#VideoCodeResponse{
+    font-size:1.2em;
+}
