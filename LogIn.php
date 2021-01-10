@@ -23,7 +23,7 @@ if(!defined("SHVideoStreamMain")){
     exit();
 }
 ?>
-<div class="big">
+<div class="big" style=width:100%>
 <link rel='stylesheet' href='style_Videos.css' type='text/css' media='all'>
 <script src="https://wes-server.nl/cdn/jquery/jquery.min.js"></script>
 <script defer src="https://wes-server.nl/cdn/fontawesome/js/solid.min.js"></script>
@@ -31,25 +31,34 @@ if(!defined("SHVideoStreamMain")){
 <link rel="stylesheet" href="https://wes-server.nl/cdn/bootstrap/css/bootstrap.min.css">
 <script src="https://wes-server.nl/cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
 <center>
-<h1>Steedshoger Voorstelling Stream</h1>    
+
+<div class=container>
+    <div class=row>
+        <div class='col-md-1'></div>
+        <div class='col-md'>
+            <h1>Steedshoger Voorstelling Stream</h1>    
 
 
-				
+                            
 
 
-<div class='VideoCodeInputWrapper form-group'>
-    <div class="input-group mb-3">    
-        <div class="input-group-prepend">
-			<span class="input-group-text VideoCodepreIcon"><i class="fas fa-theater-masks fa-lg"></i></span>
-		</div>
-        <input autofocus id='VideoCodeInput' class='VideoCodeInputField form-control ' placeholder='Videocode' /> 
-        <div class="input-group-append">
-            <span onClick='CheckCode()' class='btn btn-outline-secondary VideoCodeSendButton'>Inloggen <i class="fas fa-arrow-right fa-lg"></i></span><br/>
-		</div>
-        
+            <div class='VideoCodeInputWrapper form-group'>
+                <div class="input-group mb-3">    
+                    <div class="input-group-prepend">
+                        <span class="input-group-text VideoCodepreIcon"><i class="fas fa-theater-masks fa-lg"></i></span>
+                    </div>
+                    <input autofocus id='VideoCodeInput' class='VideoCodeInputField form-control ' placeholder='Videocode' /> 
+                    <div class="input-group-append">
+                        <span onClick='CheckCode()' class='btn btn-outline-secondary VideoCodeSendButton'>Inloggen <i class="fas fa-arrow-right fa-lg"></i></span><br/>
+                    </div>
+                    
+                </div>
+                <span id='VideoCodeResponse'></span>
+                
+            </div>
+        </div>
+        <div class='col-md-1'></div>
     </div>
-    <span id='VideoCodeResponse'></span>
-    
 </div>
 </center>
 
