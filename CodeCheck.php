@@ -6,12 +6,12 @@
  * 
  * @details     This file checks if an given code exsist. If so, it register the connected pc in de sessiontable and set an cookie.
  * 
- * @author 		Hugo Schut / Jordi van Nistelrooij
+ * @author 		Hugo van der Wel / Jordi van Nistelrooij
  * @email 		info@websensystems.nl
  * @website		https://steedshogermalden.nl
  * @version 	1.0.0
  * @date 		2021-01-09
- * @copyright 	Non of these scripts maybe copied or modified without permission of the authors
+ * @copyright 	None of these scripts may be copied or modified without permission of the authors
  * 
  * @note
  * @todo
@@ -62,4 +62,3 @@ if(isset($_POST["Code"])){
 
  ?>
 
- 
