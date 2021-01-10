@@ -14,7 +14,8 @@
  * @copyright 	None of these scripts may be copied or modified without permission of the authors
  * 
  * @note
- * @todo        String validation op $_POST["Code"]
+ *  2021-01-10  Added real_escape_string for $_POST["Code"]
+ * @todo        
  * @bug
  */
 
@@ -43,6 +44,7 @@ function randomString(int $intChars = 6, bool $boolSmall = true, bool $boolCase 
 
 
 if(isset($_POST["Code"])){
+    $_POST["Code"] = $DB->real_escape_string($_POST["Code"]);
     $objQueryResponse = $DB->query("SELECT * FROM `VideoCodes` WHERE `Code` = '".$_POST["Code"]."'");
     if($objQueryResponse->num_rows > 0){
         //code goed
