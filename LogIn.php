@@ -36,16 +36,32 @@ include('./includes/header.php');
 <script src="https://wes-server.nl/cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
 <center>
 
-<div class=container>
+<div class="container">
     <div class=row>
         <div class='col-md-1'></div>
         <div class='col-md'>
 
             <p class="mt-4 h3">Steedshoger Kids presenteert</p>
-            <h1 class="m-5 display-1">The Next Level</h1>
+            <a class="btn" data-toggle="collapse" href="#collapseDescription" role="button" aria-expanded="false" aria-controls="collapseDescription">
+                <h1 class="m-5 display-1"> The Next Level </h1>
+            </a>
+            <div class="collapse" id="collapseDescription">
+                <div class="card card-body">
+                    Claire en Bente moeten nablijven. Terwijl ze in het straflokaal wachten op
+                    de komst van de schoolleider wordt hun nieuwsgierigheid gewekt door een
+                    grote kist. Deze kist blijkt de ingang van een computergame te zijn. Bente
+                    en Claire komen terecht in Levelland. De Game-Queen regeert hier met
+                    harde hand. De meiden kunnen het spel alleen verlaten door zes levels te
+                    spelen. Waar de level-masters ze het liefst alleen maar willen helpen,
+                    maakt de Game-Queen het de meiden alleen maar lastiger. Zal het ze ooit
+                    lukken de uitgang te vinden?
+                </div>
+            </div>
+            <a class="btn" data-toggle="collapse" href="#collapseDescription" role="button" aria-expanded="false" aria-controls="collapseDescription">
+            <img src="/img/kidsFoto2020.jpg" alt="groepsfoto Kids groep die The Next Level heeft gespeeld" width="810" class="mb-5 rounded">
+            </a>
             <p class="mb-5 h3">Vul uw code hier onder in om de film van de uitvoering te zien</p>
 
-            <img src="/img/kidsFoto2020.jpg" alt="groepsfoto Kids groep die The Next Level heeft gespeeld" width="860" class="mb-5">
 
 
             <div class='VideoCodeInputWrapper form-group'>
