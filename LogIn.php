@@ -22,7 +22,11 @@ if(!defined("SHVideoStreamMain")){
     echo "Direct access not allowed";
     exit();
 }
+include('./includes/header.php');
 ?>
+
+
+
 <div class="big" style=width:100%>
 <link rel='stylesheet' href='style_Videos.css' type='text/css' media='all'>
 <script src="https://wes-server.nl/cdn/jquery/jquery.min.js"></script>
@@ -36,10 +40,12 @@ if(!defined("SHVideoStreamMain")){
     <div class=row>
         <div class='col-md-1'></div>
         <div class='col-md'>
-            <h1>Steedshoger Voorstelling Stream</h1>    
 
+            <p class="mt-4 h3">Steedshoger Kids presenteert</p>
+            <h1 class="m-5 display-1">The Next Level</h1>
+            <p class="mb-5 h3">Vul uw code hier onder in om de film van de uitvoering te zien</p>
 
-                            
+            <img src="/img/kidsFoto2020.jpg" alt="groepsfoto Kids groep die The Next Level heeft gespeeld" width="860" class="mb-5">
 
 
             <div class='VideoCodeInputWrapper form-group'>
@@ -49,7 +55,7 @@ if(!defined("SHVideoStreamMain")){
                     </div>
                     <input autofocus id='VideoCodeInput' class='VideoCodeInputField form-control ' placeholder='Videocode' /> 
                     <div class="input-group-append">
-                        <span onClick='CheckCode()' class='btn btn-outline-secondary VideoCodeSendButton'>Inloggen <i class="fas fa-arrow-right fa-lg"></i></span><br/>
+                        <span onClick='CheckCode()' class='btn btn-outline-secondary VideoCodeSendButton'>Code invoeren <i class="fas fa-arrow-right fa-lg"></i></span><br/>
                     </div>
                     
                 </div>
