@@ -42,12 +42,15 @@ include('./includes/header.php');
         <div class='col-md'>
 
             <p class="mt-4 h3">Steeds Hoger Kids presenteert</p>
+            <h1 class="m-5 display-1"> The Next Level </h1>
             <a class="btn" data-toggle="collapse" href="#collapseDescription" role="button" aria-expanded="false" aria-controls="collapseDescription">
-                <h1 class="m-5 display-1"> The Next Level </h1>
+                
                 <button class="btn btn-block" type="button">
                     Klik hier voor een beschrijving van het stuk
                 <i class="fas fa-caret-down "></i>
                 </button>
+
+                
             </a>
             <div class="collapse" id="collapseDescription">
                 <div class="card card-body">
@@ -62,7 +65,7 @@ include('./includes/header.php');
                 </div>
             </div>
             <img src="/img/kidsFoto2020.jpg" alt="groepsfoto Kids groep die The Next Level heeft gespeeld" width="810" class="mb-5 rounded">
-            <p class="mb-5 h3">Vul uw code hier onder in om de film van de uitvoering te zien</p>
+            <p class="mb-5 h3">Vul uw code hieronder in om de film van de uitvoering te zien</p>
 
 
 
@@ -80,6 +83,8 @@ include('./includes/header.php');
                 <span id='VideoCodeResponse'></span>
                 
             </div>
+            <p>Om de kosten van onze voorstellingen terug te verdienen bieden we deze stream voor een kleine vergoeding aan. Voor het aanvragen van een code kunt u mailen naar <a href=mailto:info@steedshogermail.nl>info@steedshogermail.nl</a>. Na de betaling ontvangt u de code om in te loggen per mail.
+            De code geeft toegang tot de voledige video van de voorstelling "The Next Level" van onze Kids. Met de betaling helpt u ook onze vereniging in deze moeilijk tijden. Daarvoor, bijvoorbaat, onze grote dank!</p>
         </div>
         <div class='col-md-1'></div>
     </div>

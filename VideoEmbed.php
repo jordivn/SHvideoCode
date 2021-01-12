@@ -18,11 +18,9 @@
  * @bug
  */
 if(!defined("SHVideoStreamMain")){
-  echo "Direct access not allowed";
-  exit();
+  die("Direct access not allowed");
+  
 }
-
-
 
  ?>
  <body style=background-color:black;>
