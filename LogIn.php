@@ -83,7 +83,7 @@ include('./includes/header.php');
                 <span id='VideoCodeResponse'></span>
                 
             </div>
-            <p>Om de kosten van onze voorstellingen terug te verdienen bieden we deze stream voor een kleine vergoeding aan. Voor het aanvragen van een code kunt u mailen naar <a href=mailto:info@steedshogermail.nl>info@steedshogermail.nl</a>. Na de betaling ontvangt u de code om in te loggen per mail.
+            <p style='text-align: left;'>Om de kosten van onze voorstellingen terug te verdienen bieden we deze stream voor een kleine vergoeding aan. Voor het aanvragen van een code kunt u mailen naar <a href=mailto:info@steedshogermail.nl>info@steedshogermail.nl</a>. Na de betaling ontvangt u de code om in te loggen per mail.
             De code geeft toegang tot de voledige video van de voorstelling "The Next Level" van onze Kids. Met de betaling helpt u ook onze vereniging in deze moeilijk tijden. Daarvoor, bijvoorbaat, onze grote dank!</p>
         </div>
         <div class='col-md-1'></div>
