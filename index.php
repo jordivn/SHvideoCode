@@ -13,7 +13,7 @@
  * @date 		2021-01-09
  * @copyright 	None of these scripts may be copied or modified without permission of the authors
  * 
- * @note
+ * @note        2021-01-13  Added safe() on session ID. Session can be edit by an hacker and so function as an SQL inject
  * @todo
  * @bug
  */
@@ -24,6 +24,7 @@ session_start();
 $boolUserLoggedIn = false;
 
 if(isset($_SESSION["ID"])){
+    $_SESSION["ID"] = $DB->safe($_SESSION["ID"]);
     $objQueryResponse = $DB->query("SELECT * FROM `VideoSessions` WHERE `SessionID` = '".$_SESSION["ID"]."' AND `IP` = '".$_SERVER["REMOTE_ADDR"]."'");
     if($objQueryResponse->num_rows > 0){
         $boolUserLoggedIn = true;
