@@ -41,7 +41,7 @@ include('./includes/header.php');
         <div class='col-md-1'></div>
         <div class='col-md'>
 
-            <p class="mt-4 h3">Steedshoger Kids presenteert</p>
+            <p class="mt-4 h3">Steeds Hoger Kids presenteert</p>
             <a class="btn" data-toggle="collapse" href="#collapseDescription" role="button" aria-expanded="false" aria-controls="collapseDescription">
                 <h1 class="m-5 display-1"> The Next Level </h1>
                 <button class="btn btn-block" type="button">
