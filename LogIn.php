@@ -13,8 +13,9 @@
  * @date 		2021-01-12
  * @copyright 	None of these scripts may be copied or modified without permission of the authors
  * 
- * @note
- * @todo
+ * @note        2021-01-13  Added more error heandling on response.
+ *                          Added discription on how to get access.
+ * @todo        Add Payment method
  * @bug
  */
 
@@ -80,7 +81,7 @@ include('./includes/header.php');
                     </div>
                     
                 </div>
-                <span id='VideoCodeResponse'></span>
+                <span id='VideoCodeResponse' class='alert' role='alert'></span>
                 
             </div>
             <p style='text-align: left;'>Om de kosten van onze voorstellingen terug te verdienen bieden we deze stream voor een kleine vergoeding aan. Voor het aanvragen van een code kunt u mailen naar <a href=mailto:info@steedshogermail.nl>info@steedshogermail.nl</a>. Na de betaling ontvangt u de code om in te loggen per mail.
@@ -106,19 +107,23 @@ function CheckCode(){
 			Code: $('#VideoCodeInput').val()
 		},
 		success: function (data) {
-			// response = JSON.parse(data);
-			if (JSON.parse(data).Status === true) {
-                $('#VideoCodeResponse').html("Uw code is geaccepteerd. Uw wordt nu doorgestuurd naar de video.");
+			response = JSON.parse(data);
+			if (response.Status === true) {
+                $('#VideoCodeResponse').removeClass("alert-danger");
+                $('#VideoCodeResponse').addClass("alert-success");
+                $('#VideoCodeResponse').html(response.Response);
                setTimeout(function(){location.href = location.href}, 2000);
 			} else {
-                $('#VideoCodeResponse').html("Uw code is niet geaccepteerd.");
+                $('#VideoCodeResponse').removeClass("alert-success");
+                $('#VideoCodeResponse').addClass("alert-danger");
+                $('#VideoCodeResponse').html(response.Response);
 			}
         },
         error: function (request, status, error) {
-            console.log($('#VideoCodeInput').val());
-            console.log(request.responseText);
-            console.log(status.message);
-            console.log(error.errorMessage);
+            $('#VideoCodeResponse').removeClass("alert-success");
+            $('#VideoCodeResponse').addClass("alert-danger");
+            $('#VideoCodeResponse').html("Iets ging er niet goed. Probeer het later nog eens.");
+            
         }
     });
 }
