@@ -10,13 +10,18 @@
  * @email 		info@websensystems.nl
  * @website		https://steedshogermalden.nl
  * @version 	1.0.0
- * @date 		2021-01-09
- * @copyright 	None of these scripts may be copied or modified without permission of the authors
+ * @date 		  2021-01-09
+ * @copyright None of these scripts may be copied or modified without permission of the authors
  * 
- * @note
+ * @note      2021-01-12  Added constant check to prevent bypass.
  * @todo
  * @bug
  */
+if(!defined("SHVideoStreamMain")){
+  echo "Direct access not allowed";
+  exit();
+}
+
 
 
  ?>
