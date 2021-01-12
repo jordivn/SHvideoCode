@@ -9,8 +9,8 @@
  * @author 		Hugo van der Wel / Jordi van Nistelrooij
  * @email 		info@websensystems.nl
  * @website		https://steedshogermalden.nl
- * @version 	1.0.0
- * @date 		2021-01-09
+ * @version 	1.0.1
+ * @date 		2021-01-12
  * @copyright 	None of these scripts may be copied or modified without permission of the authors
  * 
  * @note
@@ -44,6 +44,10 @@ include('./includes/header.php');
             <p class="mt-4 h3">Steedshoger Kids presenteert</p>
             <a class="btn" data-toggle="collapse" href="#collapseDescription" role="button" aria-expanded="false" aria-controls="collapseDescription">
                 <h1 class="m-5 display-1"> The Next Level </h1>
+                <button class="btn btn-block" type="button">
+                    Klik hier voor een beschrijving van het stuk
+                <i class="fas fa-caret-down "></i>
+                </button>
             </a>
             <div class="collapse" id="collapseDescription">
                 <div class="card card-body">
@@ -57,9 +61,7 @@ include('./includes/header.php');
                     lukken de uitgang te vinden?
                 </div>
             </div>
-            <a class="btn" data-toggle="collapse" href="#collapseDescription" role="button" aria-expanded="false" aria-controls="collapseDescription">
             <img src="/img/kidsFoto2020.jpg" alt="groepsfoto Kids groep die The Next Level heeft gespeeld" width="810" class="mb-5 rounded">
-            </a>
             <p class="mb-5 h3">Vul uw code hier onder in om de film van de uitvoering te zien</p>
 
 
@@ -99,7 +101,7 @@ function CheckCode(){
 			Code: $('#VideoCodeInput').val()
 		},
 		success: function (data) {
-			response = JSON.parse(data);
+			let response = JSON.parse(data);
 			if (response.Status === true) {
                 $('#VideoCodeResponse').html("Uw code is geaccepteerd. Uw wordt nu doorgestuurd naar de video.");
                setTimeout(function(){location.href = location.href}, 2000);
