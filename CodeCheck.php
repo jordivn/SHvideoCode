@@ -21,7 +21,6 @@
 
 require_once("../includes/MySQL.php");
 
-
 /**
  * Function for creating random strings
  */
@@ -44,8 +43,10 @@ function randomString(int $intChars = 6, bool $boolSmall = true, bool $boolCase 
 
 
 if(isset($_POST["Code"])){
+    echo json_encode(array("Status" => true, "Response" => "Code geaccepteerd."));
+    return;
     $_POST["Code"] = $DB->real_escape_string($_POST["Code"]);
-    $objQueryResponse = $DB->query("SELECT * FROM `VideoCodes` WHERE `Code` = '".$_POST["Code"]."'");
+    $objQueryResponse = $DB->query("SELECT 1 FROM `VideoCodes` WHERE `Code` = '".$_POST["Code"]."'");
     if($objQueryResponse->num_rows > 0){
         //code goed
         session_start();

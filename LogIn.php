@@ -101,13 +101,19 @@ function CheckCode(){
 			Code: $('#VideoCodeInput').val()
 		},
 		success: function (data) {
-			let response = JSON.parse(data);
-			if (response.Status === true) {
+			// response = JSON.parse(data);
+			if (JSON.parse(data).Status === true) {
                 $('#VideoCodeResponse').html("Uw code is geaccepteerd. Uw wordt nu doorgestuurd naar de video.");
                setTimeout(function(){location.href = location.href}, 2000);
 			} else {
                 $('#VideoCodeResponse').html("Uw code is niet geaccepteerd.");
 			}
+        },
+        error: function (request, status, error) {
+            console.log($('#VideoCodeInput').val());
+            console.log(request.responseText);
+            console.log(status.message);
+            console.log(error.errorMessage);
         }
     });
 }
